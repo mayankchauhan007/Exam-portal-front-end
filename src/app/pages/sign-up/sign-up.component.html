@@ -1,0 +1,54 @@
+
+<div class="bootstrap-wrapper">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                
+                
+                
+                <form (ngSubmit)="formSubmit()">
+
+                    <div class="container text-center">
+                        <img src="../../../assets/exam portal logo.png" alt="logo">
+                    </div>
+                    
+                    <h1 class="text-center">Register here !!</h1>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input required [(ngModel)]="user.userName" name="userName" matInput placeholder="Enter Username">
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input required [(ngModel)]="user.password" name="password" type="password" matInput placeholder="Enter password ">
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input required [(ngModel)]="user.firstName" name="firstName" matInput placeholder="Enter First Name">
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input required [(ngModel)]="user.lastName" name="lastName" matInput placeholder="Enter Last Name">
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input required [(ngModel)]="user.email" name="email" type="email" matInput placeholder="Enter Email">
+                    </mat-form-field>
+
+                    <div class="container text-center">
+                        <button type="submit" mat-raised-button color="primary"> Submit </button>
+                        <button type="reset" class="ml10" mat-raised-button color="accent"> Clear </button>
+                        <!-- <h2>Already have an account?</h2>
+                        <a mat-raised-button color="primary" routerLink="/login">Login here </a> -->
+                    </div>
+                </form>
+            </div> 
+        </div>
+    </div>
+
+</div>

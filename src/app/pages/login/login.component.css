@@ -1,0 +1,21 @@
+img{
+    max-width: 30%;
+    height: 30%;
+
+}
+.full-width{
+    width: 100%;
+}
+form{
+    box-shadow: 0 0 40px rgb(8 7 16 / 60%);
+    padding: 20px;
+    
+}
+mat-card{
+    background-image: url("../../../assets/bubbles.jpg");
+    background-size: cover;
+}
+h1{
+    font-weight: bold;
+    color: rgb(203, 51, 14);
+}

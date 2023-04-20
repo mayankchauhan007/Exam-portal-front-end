@@ -1,0 +1,33 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <mat-card>
+        <form action="">
+          <div class="container text-center">
+            <img src="../../../assets/exam portal logo.png" alt="logo">
+          </div>
+          <h1 class="text-center">Login here !!</h1>
+
+          <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Username</mat-label>
+          <input required  matInput placeholder="Enter Username">
+          </mat-form-field>
+
+          <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input required type="password" matInput placeholder="Enter password ">
+          </mat-form-field>
+
+          <div class="container text-center">
+            <button type="submit" mat-raised-button color="primary"> Login </button>
+            <button type="reset" class="ml10" mat-raised-button color="accent"> Clear </button>
+            <h2 class="mt10">Don't have an account?</h2>
+            <a mat-raised-button color="primary" routerLink="/signUp">Register here </a>
+          </div>
+        </form>
+      </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
