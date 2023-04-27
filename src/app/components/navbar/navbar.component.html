@@ -6,14 +6,36 @@
     </a>
     <span>Exam Portal</span>
     <span class="example-spacer"></span>
-    <a routerLink="login" mat-button color="azure"
+    <a
+    *ngIf="!login.isLoggedIn()"
+    routerLink="login" mat-button color="azure"
     class="" 
     aria-label="Login">
       Login
     </a>
-    <a routerLink="signUp" mat-button color="azure"
+    <a
+    *ngIf="!login.isLoggedIn()" 
+    routerLink="signUp" mat-button color="azure"
     class="" 
     aria-label="Login">
         Register
     </a>
+
+    <a
+    *ngIf="login.isLoggedIn()" 
+     mat-button color="azure"
+    class="" 
+    aria-label="Login">
+        {{login.getUser().userName}}
+    </a>
+
+    <a
+    (click)="logout()"
+    *ngIf="login.isLoggedIn()" 
+     mat-button color="azure"
+    class="" 
+    aria-label="Login">
+        Logout
+    </a>
+
   </mat-toolbar>
