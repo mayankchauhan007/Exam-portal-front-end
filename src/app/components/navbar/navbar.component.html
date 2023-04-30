@@ -7,14 +7,14 @@
     <span>Exam Portal</span>
     <span class="example-spacer"></span>
     <a
-    *ngIf="!login.isLoggedIn()"
+    *ngIf="!isLoggedIn"
     routerLink="login" mat-button color="azure"
     class="" 
     aria-label="Login">
       Login
     </a>
     <a
-    *ngIf="!login.isLoggedIn()" 
+    *ngIf="!isLoggedIn" 
     routerLink="signUp" mat-button color="azure"
     class="" 
     aria-label="Login">
@@ -22,16 +22,16 @@
     </a>
 
     <a
-    *ngIf="login.isLoggedIn()" 
+    *ngIf="isLoggedIn && user" 
      mat-button color="azure"
     class="" 
     aria-label="Login">
-        {{login.getUser().userName}}
+        {{this.login.getUser().userName}}
     </a>
 
     <a
     (click)="logout()"
-    *ngIf="login.isLoggedIn()" 
+    *ngIf="isLoggedIn" 
      mat-button color="azure"
     class="" 
     aria-label="Login">
