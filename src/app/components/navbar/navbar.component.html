@@ -24,7 +24,8 @@
     <a
     *ngIf="isLoggedIn && user" 
      mat-button color="azure"
-    class="" 
+    class=""
+    routerLink="/admin/profile" 
     aria-label="Login">
         {{this.login.getUser().userName}}
     </a>

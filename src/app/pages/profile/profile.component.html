@@ -1,0 +1,46 @@
+<mat-card *ngIf="user">
+    <h1 class="text-center"><b> Profile details</b></h1>
+    <!-- {{user | json }} -->
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    <img src="../../../assets/default-profile-picture1.jpg" alt="Profile picture"
+                    class="profile-image">
+                    <h2 class="mt10">{{user.firstName}} {{user.lastName}}</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <table class="text-center">
+                            <tr>
+                                <td>Username</td>
+                                <td>{{user.userName}}</td>
+                            </tr>
+
+                            <tr>
+                                <td>UserId</td>
+                                <td>Exam{{user.id}}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Role</td>
+                                <td>{{user.authorities[0].authority}}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Status</td>
+                                <td>{{user.enabled?"ACTIVE":"NOT ACTIVE"}}</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </mat-card-content>
+    <mat-card-actions >
+        <button mat-raised-button color="primary">UPDATE</button>
+        <button mat-raised-button class="ml10" color="accent">SHARE</button>
+    </mat-card-actions>
+</mat-card>
