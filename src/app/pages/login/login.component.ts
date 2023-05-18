@@ -57,7 +57,7 @@ export class LoginComponent {
             {
               // go to user dashboard
               // window.location.href = "/user-dashboard";
-              this.router.navigate(['user-dashboard']);
+              this.router.navigate(['user-dashboard/all']);
               this.login.loginStatusSubject.next(true);
             }
             else{
