@@ -25,7 +25,7 @@
 
                     <mat-card-actions>
                         <button mat-raised-button color="primary">View</button>
-                        <button mat-raised-button class="ml10" color="accent">Start</button>
+                        <button mat-raised-button [routerLink]="'/user-dashboard/instructions/' + q.qid " class="ml10" color="accent" >Start</button>
                         <button mat-button class="ml10" color="accent">Questions: {{q.numberOfQuestions}}</button>
                         <button mat-button class="ml10" color="accent">Max Marks {{q.maxMarks}}</button>
 
@@ -42,7 +42,7 @@
             </div>
 
         </div>
-        <div class="col-md-12 no-quizzes" *ngIf="quizzes.length ==0">
+        <div class="col-md-12 no-quizzes" *ngIf="quizzes!= null  && quizzes.length ==0">
             <mat-card>
                 <mat-card-content>
                     <h1>No Quiz in this Category</h1>

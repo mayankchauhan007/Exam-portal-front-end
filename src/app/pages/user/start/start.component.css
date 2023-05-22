@@ -1,0 +1,11 @@
+h1{
+    font-weight: bold;
+}
+    
+.spinner{
+    
+    margin-top: 80px;
+}
+mat-spinner{
+    margin: auto;
+}

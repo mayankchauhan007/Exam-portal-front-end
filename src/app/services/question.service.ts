@@ -13,11 +13,20 @@ export class QuestionService {
     return this.http.get(baseUrl+"/question/quiz/all/" + qid);
 
   }
+
+  public getQuestionsOfQuizForTest (qid:any){
+    return this.http.get(baseUrl+"/question/quiz/" + qid);
+
+  }
   public addQuestionsOfQuiz (question:any){
     return this.http.post(baseUrl+"/question/" , question);
   }
 
   public deleteQuestion (qid:any){
     return this.http.delete(baseUrl + "/question/" + qid);
+  }
+  public evalQuiz(questions:any){
+    return this.http.post(baseUrl+"/question/eval-quiz/" , questions);
+
   }
 }

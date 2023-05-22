@@ -1,0 +1,76 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>
+                            Read the Instructions carefully:
+                        </mat-card-title>
+
+                    </mat-card-header>
+
+                    <mat-card-content *ngIf="quiz!= null " >
+                        <h2 >{{quiz.title}}</h2>
+                        <p >{{quiz.description}}</p>
+                        <mat-divider></mat-divider>
+
+                        <ul>
+                            <li>
+                                The quiz consists of multiple-choice questions.
+                            </li>
+                            <li>
+                                Each question will have a set of options, and you need to select the correct answer by choosing the corresponding option.
+                            </li>
+                            <li>
+                                You have to submit quiz within <b>{{quiz.numberOfQuestions*2}} minutes</b>.
+                            </li>
+                            <li>
+                                You can attempt quiz any number of times.
+                            </li>
+                            <li>
+                                There are <b>{{quiz.numberOfQuestions}} questions</b> in this quiz.
+                            </li>
+                            <li>
+                                Each question carries <b>{{quiz.maxMarks/quiz.numberOfQuestions}} marks</b>.
+                            </li>
+                            <li>
+                                This quiz has no negative marking.
+                            </li>
+                            
+                        </ul>
+                        <mat-divider></mat-divider>
+                        <h2>Attempting Quiz</h2>
+                        <ul>
+                            <li>
+                                Click on <b>Start Quiz</b> button to start the quiz.
+                            </li>
+                            <li>
+                                The timer will start the moment to click on start Quiz button.
+                            </li>
+                            <li>
+                                You can not resume this quiz is interrupted due to any reason.
+                            </li>
+                            <li>
+                                Scroll down to move to the next question.
+                            </li>
+                            <li>
+                                Click on Submit test button to submit the quiz.
+                            </li>
+                            
+                        </ul>
+                    </mat-card-content>
+                    
+                    <mat-card-actions >
+                        <div class="container text-center">
+                            <button mat-raised-button (click)="startQuiz(this.qid)" color="primary">Start Quiz</button>
+                        </div>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+
+    </div>
+</div>
